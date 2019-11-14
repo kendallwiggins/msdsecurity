@@ -5,6 +5,13 @@ public class TokenRequestData {
 	String password;
 	String scopes;
 	
+	public TokenRequestData() {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "TokenRequestData [username=" + username + ", password=" + password + ", scopes=" + scopes + "]";
+	}
 	public TokenRequestData(String username, String password, String scopes) {
 		super();
 		this.username = username;

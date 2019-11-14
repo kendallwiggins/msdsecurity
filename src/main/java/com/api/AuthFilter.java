@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class AuthFilter implements Filter {
 
 	//JWTUtil jwtUtil = new JWTMockUtil();
