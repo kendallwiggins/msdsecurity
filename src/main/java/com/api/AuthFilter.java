@@ -14,9 +14,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class AuthFilter implements Filter {
 
-	//JWTUtil jwtUtil = new JWTMockUtil();
-	JWTUtil jwtUtil = new JWTHelper();
-	
 	private String data_scope = "com.webage.data.apis";
 	private String auth_scope = "com.webage.auth.apis";
 	

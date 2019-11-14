@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.api.Customer;
-//import com.webage.domain.CustomerFactory;
+import com.api.CustomerFactory;
 import com.api.Token;
 import com.api.JWTHelper;
 
