@@ -9,14 +9,13 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.stereotype.Component;
 
 @Component
 public class AuthFilter implements Filter {
 
-	JWTUtil jwtUtil = new JWTMockUtil();
-	// JWTUtil jwtUtil = new JWTHelper();
+	//JWTUtil jwtUtil = new JWTMockUtil();
+	JWTUtil jwtUtil = new JWTHelper();
 	
 	private String api_scope = "com.api.customer.r";
 

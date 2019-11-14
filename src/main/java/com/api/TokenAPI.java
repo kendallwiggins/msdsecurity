@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/token")
 public class TokenAPI {
-	 JWTUtil jwtUtil = new JWTMockUtil();
-//	JWTUtil jwtUtil = new JWTHelper();
+	 //JWTUtil jwtUtil = new JWTMockUtil();
+	 JWTUtil jwtUtil = new JWTHelper();
 	
 	@PostMapping(consumes = "application/json")
 	public ResponseEntity<?> getToken(@RequestBody TokenRequestData tokenRequestData) {
