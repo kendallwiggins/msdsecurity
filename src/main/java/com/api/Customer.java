@@ -7,7 +7,9 @@ public class Customer {
 	String password;
 	String email;
 
+	public Customer() {
 	
+	}
 	
 	public Customer(long id, String name, String password, String email) {
 		super();

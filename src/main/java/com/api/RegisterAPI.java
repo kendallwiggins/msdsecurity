@@ -32,9 +32,9 @@ public class RegisterAPI {
 			return ResponseEntity.badRequest().build();
 		}
 		
-		//String json_string = CustomerFactory.getCustomerAsJSONString(newCustomer);
+		String json_string = CustomerFactory.getCustomerAsJSONString(newCustomer);
 		
-		//postNewCustomerToCustomerAPI(json_string);
+		postNewCustomerToCustomerAPI(json_string);
 		
 		// old code that calls repository directly
 		// newCustomer = repo.save(newCustomer);

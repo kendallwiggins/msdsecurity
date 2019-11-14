@@ -11,14 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class AuthFilter implements Filter {
 
 	//JWTUtil jwtUtil = new JWTMockUtil();
 	JWTUtil jwtUtil = new JWTHelper();
 	
-	private String api_scope = "com.api.customer.r";
-
+	private String data_scope = "com.webage.data.apis";
+	private String auth_scope = "com.webage.auth.apis";
+	
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
@@ -37,7 +38,7 @@ public class AuthFilter implements Filter {
 				String jwt_token = authheader.substring(7, authheader.length());
 				if (jwtUtil.verifyToken(jwt_token)) {
 					String request_scopes = jwtUtil.getScopes(jwt_token);
-					if (request_scopes.contains(api_scope)) {
+					if (request_scopes.contains(auth_scope) && request_scopes.contains(data_scope)) {
 						// continue on to api
 						chain.doFilter(request, response);
 						return;
