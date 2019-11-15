@@ -46,6 +46,7 @@ public class TokenAPI {
 				&& result) {
 			Token token = jwtUtil.createToken();
 			//ResponseEntity<?> response = ResponseEntity.ok(getToken(tokenRequestData));
+			System.out.println(token);
 			return token;
 		}
 	// bad request - no result
