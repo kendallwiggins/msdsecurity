@@ -1,7 +1,7 @@
 package com.api;
 
 public class TokenRequestData {
-	String username;
+	String name;
 	String password;
 	String scopes;
 	
@@ -10,21 +10,21 @@ public class TokenRequestData {
 	}
 	@Override
 	public String toString() {
-		return "TokenRequestData [username=" + username + ", password=" + password + ", scopes=" + scopes + "]";
+		return "TokenRequestData [username=" + name + ", password=" + password + ", scopes=" + scopes + "]";
 	}
-	public TokenRequestData(String username, String password, String scopes) {
+	public TokenRequestData(String name, String password) {
 		super();
-		this.username = username;
+		this.name = name;
 		this.password = password;
-		this.scopes = scopes;
+		this.scopes = "scope";
 	}
 
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
 	
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	public String getPassword() {
