@@ -17,6 +17,8 @@ public class AuthFilter implements Filter {
 	private String data_scope = "com.webage.data.apis";
 	private String auth_scope = "com.webage.auth.apis";
 	
+	JWTUtil jwtUtil = new JWTHelper();
+	
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
@@ -28,7 +30,9 @@ public class AuthFilter implements Filter {
 			// continue on to get-token endpoint
 			chain.doFilter(request, response);
 			return;
-		} else {
+		} 
+		
+		else {
 			// check JWT token
 			String authheader = req.getHeader("authorization");
 			if (authheader != null && authheader.length() > 7 && authheader.startsWith("Bearer")) {

@@ -32,9 +32,9 @@ public class RegisterAPI {
 			return ResponseEntity.badRequest().build();
 		}
 		
-		String json_string = CustomerFactory.getCustomerAsJSONString(newCustomer);
+		//String json_string = CustomerFactory.getCustomerAsJSONString(newCustomer);
 		
-		postNewCustomerToCustomerAPI(json_string);
+		//postNewCustomerToCustomerAPI(json_string);
 		
 		// old code that calls repository directly
 		// newCustomer = repo.save(newCustomer);
@@ -53,8 +53,8 @@ public class RegisterAPI {
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Content-Type", "application/json");
-	  		Token token = TokenAPI.getAppUserToken();
-	  		conn.setRequestProperty("authorization", "Bearer " + token.getToken());
+	  		//Token token = TokenAPI.getAppUserToken();
+	  		//conn.setRequestProperty("authorization", "Bearer " + token.getToken());
 	  		// conn.setRequestProperty("tokencheck", "false");
 
 			OutputStream os = conn.getOutputStream();
